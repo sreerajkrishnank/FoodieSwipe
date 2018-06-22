@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link href="//cdn.muicss.com/mui-0.9.39/css/mui.min.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Tinder for Food</title>
+    <style>
+        html {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        body {
+            margin: 0 auto;
+            padding: 0;
+            font-family: avenir, sans-serif;
+            text-align: left;
+            background-color: #e7e7e7;
+
+        }
+
+        img {
+            width: 100%;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        h1, h2 {
+            font-weight: 600;
+        }
+
+        .root-div{
+            background: linear-gradient(
+                    rgba(20,20,20, .5),
+                    rgba(20,20,20, .5)), url(https://source.unsplash.com/400x800/?food,burger,pizza);
+            background-size: cover;
+            height:100vh;
+            display:table;
+            width:100%;
+        }
+
+        .master-root {
+            height:100vh;
+            background-color:  #e7e7e7;
+            overflow: hidden;
+        }
+
+        .card {
+            background-color: white;
+            background-size: cover;
+            position: absolute;
+            background: #ffffff;
+            width: 100vw;
+            margin: 0 auto;
+            transition: box-shadow .3s;
+            box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+            cursor: pointer;
+        }
+
+        .animate {
+            transition: transform .3s;
+            box-shadow: none;
+        }
+
+        .inactive {
+            box-shadow: none;
+        }
+
+        .card-media{
+            height: 100vh;
+            -webkit-background-size:cover;
+            background-size:cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .alert {
+            width: 45%;
+            min-height: 10%;
+            position: absolute;
+            z-index: 9999;
+            opacity: 0;
+            transition: opacity .5s;
+            color: white;
+            vertical-align: middle;
+            line-height: 3rem;
+        }
+
+        .alert-visible {
+            opacity: 1;
+        }
+
+        .alert-right {
+            top: 0;
+            right: 0;
+            background: green;
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+        }
+
+        .alert-left {
+            top: 0;
+            left: 0;
+            background: red;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+
+        .alert-top {
+            background: purple;
+            border-radius: 50px;
+            transform: translate(-50%, 0);
+            margin-left: 50%;
+        }
+
+        .alert-bottom {
+            bottom: 0;
+            background: blue;
+            border-top-left-radius: 50px;
+            border-radius: 50px;
+            transform: translate(-50%, 0);
+            margin-left: 50%;
+        }
+        .card-desc{
+            position: absolute;
+            bottom: 40%;
+            width: 100%;
+            background: #00000061;
+            color:white;
+            word-wrap: break-word;
+            overflow: hidden;
+            min-width: 300px;
+            padding-left: 10px;
+            font-size: 11px;
+        }
+
+        .material-icons{
+            font-size:12px;
+        }
+
+        .coordinates-button{
+            display: table-cell;
+            vertical-align: middle;
+            text-align:center;
+        }
+
+        .inactive{
+            height: 0px;
+            width: 0px;
+        }
+
+        .visible {
+            display: block;
+            width: 100vw;
+            height: 100vh;
+            -webkit-transition: width 2s, height 2s; /* For Safari 3.1 to 6.0 */
+            transition: width 2s, height 2s;
+        }
+    </style>
+</head>
+<body>
+<noscript>
+    You need to enable JavaScript to run this app.
+</noscript>
+<div id="root"></div>
+<!--
+  This HTML file is a template.
+  If you open it directly in the browser, you will see an empty page.
+
+  You can add webfonts, meta tags, or analytics to this file.
+  The build step will place the bundled scripts into the <body> tag.
+
+  To begin the development, run `npm start` or `yarn start`.
+  To create a production bundle, use `npm run build` or `yarn build`.
+-->
+</body>
+</html>

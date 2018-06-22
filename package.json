@@ -1,0 +1,26 @@
+{
+  "name": "tinderforfood",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^1.2.1",
+    "@material-ui/icons": "^1.1.0",
+    "@types/react": "^16.3.18",
+    "axios": "^0.18.0",
+    "muicss": "^0.9.39",
+    "react": "15.4.2",
+    "react-dom": "15.4.2",
+    "react-redux": "^5.0.7",
+    "react-scripts": "1.1.4",
+    "react-swipe-card": "^0.1.4",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0",
+    "zomato": "^1.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
